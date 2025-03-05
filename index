@@ -1,0 +1,93 @@
+// Paste It In Your CSS File
+
+.gallery-section {
+  text-align: center;
+}
+
+.gallery-icon {
+  position: absolute;
+  width: 100px; /* Adjust icon size */
+  height: auto;
+  right: 0;
+  top: 0;
+}
+
+.gallery-item {
+  width: 100%;
+  max-width: 400px; /* Adjust based on your design */
+  margin: auto;
+}
+
+/* Image Box */
+.gallery-box {
+  height: 300px !important; /* Uniform size */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-box img {
+  width: 100% !important;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slick Slider Navigation */
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+  padding: 8px 14px !important;
+  color: var(--theme-color-1) !important;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slick-prev {
+  left: -40px;
+}
+.slick-next {
+  right: -40px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 2rem;
+  }
+  .gallery-box {
+    height: 250px !important;
+  }
+  .slick-prev,
+  .slick-next {
+    font-size: 18px;
+  }
+}
+
+// Paste It In Index file
+
+<div class="gallery-section mt-4 pt-2">
+    <div class="container">
+        <div class="section-heading position-relative mb-4">
+            <h2 class="fw-bold h4 pb-3">Gallery</h2>
+            <img src="{{ asset('assets/post_templates/photostudio/image/woman.png') }}" alt="Gallery Icon" class="gallery-icon">
+        </div>
+        <div class="gallery-slider ">
+                <div class="gallery-item">
+                    <div class="gallery-box">
+                        <div class="gallery-img">
+                            <img src="your_image.jpg"
+                                 alt="img" class="w-100">
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
